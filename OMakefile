@@ -2,7 +2,7 @@
 # Include path for the caml headers <caml/mlvalues.h> and friends.  
 # You might need something this if you have installed OCaml manually or via
 # something like macports:
-#INCLUDES += /opt/local/lib/ocaml
+INCLUDES += /usr/lib/ocaml
 
 # Uncomment one of the following if you want support for extended attributes,
 # depending on your OS:
@@ -30,10 +30,10 @@ OCAML_CLIBS += ometastore_stub
 OCAML_OTHER_LIBS += str
 
 OCamlProgram(ometastore, folddir util ometastore)
-OCamlProgram(find-git-repos, folddir util find-git-repos)
-OCamlProgram(find-git-files, folddir util find-git-files)
+OCamlProgram(find_git_repos, folddir util find_git_repos)
+OCamlProgram(find_git_files, folddir util find_git_files)
 
-.DEFAULT: ometastore find-git-files find-git-repos
+.DEFAULT: ometastore find_git_files find_git_repos
 
 .PHONY: clean
 
